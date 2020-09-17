@@ -37,6 +37,7 @@ public class Application {
 			int option =sc.nextInt();
 			done=option;
 		}
+		sc.close();
 		
 	}
 		
