@@ -4,9 +4,7 @@ public interface Accomodities {
 	
 	String APPNAME=" Rental System ";
 	
-	public abstract int getQuantity();
-	public int getNoOfDaysRented();
-	double getPrice();
+	public abstract int calculateRent();
 	
 
 }

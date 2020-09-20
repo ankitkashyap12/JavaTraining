@@ -12,6 +12,12 @@ public class Application {
 		Billing bill= new Billing();
 		bill.printFees(bhushan);
 		bill.printFees(prateek);
+		
+		
+		WrappersAndStatic obj= new WrappersAndStatic();
+		System.out.println(obj.parse("1234"));
+		System.out.println(obj.useToString(123).length());
+//		System.out.println(obj.toString(345));
 
 	}
 
