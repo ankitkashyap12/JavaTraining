@@ -1,0 +1,2 @@
+Customer [customerId=12, customerName=suresh, mobileNumber=989087, email=ui]
+Customer [customerId=12, customerName=suresh, mobileNumber=989087, email=ui]
