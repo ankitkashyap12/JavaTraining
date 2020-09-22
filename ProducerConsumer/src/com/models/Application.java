@@ -16,7 +16,7 @@ public class Application {
 //					System.out.println("ThreadWrite");
 					try {
 						
-						service.writetoFile("some random texts");
+						service.writetoFile("some random texts here");
 						
 					} catch (InterruptedException e) {
 						e.printStackTrace();
