@@ -24,7 +24,7 @@ public class Application {
 		Invoice ram2=new Invoice(191, "ram2", 865);
 		Invoice ram3=new Invoice(181, "ram3", 165);
 		Invoice ram4=new Invoice(141, "ram4", 465);
-		Invoice ram5=new Invoice(651, "ram5", 965);
+		Invoice ram5=new Invoice(651, "ramaaa", 965);
 		
 		InvoiceDAO dao=new InvoiceDaoImpl();
 		dao.add(ram);
