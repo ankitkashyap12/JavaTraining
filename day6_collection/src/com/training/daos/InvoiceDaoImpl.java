@@ -5,6 +5,8 @@ import java.util.*;
 
 import com.training.Invoice;
 import com.training.ifaces.InvoiceDAO;
+import com.training.util.CustomerNameSort;
+import com.training.util.InvoiceNumberComparator;
 
 public class InvoiceDaoImpl implements InvoiceDAO {
 
@@ -26,7 +28,7 @@ public class InvoiceDaoImpl implements InvoiceDAO {
 	@Override
 	public boolean add(Invoice entity) {
 		
-		boolean result=false;
+//		boolean result=false;
 		return this.invList.add(entity);
 	}
 
@@ -74,6 +76,46 @@ public class InvoiceDaoImpl implements InvoiceDAO {
 		}
 		
 		return updated;
+	}
+
+	@Override
+	public Collection<Invoice> sortedByInvoiceNumber() {
+		
+		 Collections.sort(this.invList);
+		 return this.invList;
+	}
+
+	@Override
+	public Collection<Invoice> sortedBy(String propName) {
+		
+		if(propName.equalsIgnoreCase("InvoiceNumber")) {
+			Collections.sort(this.invList, getComparator(1));
+		}
+		else if(propName.equalsIgnoreCase("InvoiceNumber")){
+			
+			Collections.sort(this.invList,getComparator(2));
+		}
+		
+		
+		return this.invList;
+	}
+	
+	
+	
+	
+	private Comparator<Invoice> getComparator(int key)
+	{
+		switch (key) {
+		case 1:
+			
+			return new InvoiceNumberComparator();
+		case 2:
+			return new CustomerNameSort();
+
+		default:
+			return null;
+		}
+		
 	}
 	
 	//indexOf,contains,set

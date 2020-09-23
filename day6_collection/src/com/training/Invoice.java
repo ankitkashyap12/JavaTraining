@@ -3,7 +3,7 @@ package com.training;
 import java.io.Serializable;
 import java.util.Collection;
 
-public class Invoice implements  Serializable {
+public class Invoice implements  Serializable,Comparable<Invoice> {
 
 	/**
 	 * 
@@ -91,6 +91,23 @@ public class Invoice implements  Serializable {
 	public String toString() {
 		return "Invoice [invoiceNumber=" + invoiceNumber + ", customerName=" + customerName + ", amount=" + amount
 				+ "]";
+	}
+
+
+
+	@Override
+	public int compareTo(Invoice otherObj) {
+		
+		if(this.invoiceNumber < otherObj.invoiceNumber)
+		{
+			return -1;
+		}
+		if(this.invoiceNumber > otherObj.invoiceNumber)
+		{
+			return 1;
+		}
+
+		return 0;
 	}
 	
 	
