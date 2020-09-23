@@ -30,6 +30,8 @@ public class Application {
 		Patients radhe=new Patients("radhe", 194);
 		Patients mohan=new Patients("mohan", 125);
 		Patients kashyap=new Patients("kashyap", 198);
+		
+		
 			
 		HospitalDAO service=new HospitalServices();
 		
@@ -48,7 +50,7 @@ public class Application {
 		
 		System.out.println( service.cancelAppointment(raj,appointment)); // return type is boolean 
 		
-		System.out.println("After deleting ");
+		System.out.println("After deleting the appointment list is: ");
 		System.out.println(appointment);
 		
 		
