@@ -29,7 +29,7 @@ public class Application {
 			{
 			
 			System.out.println("Rental Shop !!");
-			selected.
+//			selected.
 			
 			System.out.println("Rent is: "+ selected.calculateRent());
 

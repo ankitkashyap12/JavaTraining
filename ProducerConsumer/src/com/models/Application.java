@@ -9,6 +9,7 @@ public class Application {
 //		TextToWrite text1=new TextToWrite("This is Text1");
 //		TextToWrite text2=new TextToWrite("This is Text2");
 		FileServices service=new FileServices();
+		String[] text= {"ank","ram","aash"};
 		Thread threadWrite=new Thread() {
 
 			@Override
@@ -16,7 +17,7 @@ public class Application {
 //					System.out.println("ThreadWrite");
 					try {
 						
-						service.writetoFile("some random texts here");
+						service.writetoFile(text);
 						
 					} catch (InterruptedException e) {
 						e.printStackTrace();

@@ -4,7 +4,7 @@ import java.io.*;
 
 public class FileServices {
 	
-	public synchronized boolean writetoFile( String text) throws InterruptedException
+	public synchronized boolean writetoFile( String[] text) throws InterruptedException
 	{
 		boolean written =false;
 		PrintWriter writer= null;
@@ -20,7 +20,12 @@ public class FileServices {
 //		 wait();
 //	}
 	System.out.println("Starting to write ");
-	writer.println(text);
+	for (String str:text)
+	{
+		
+			writer.println(str);
+	}
+	
 	System.out.println("Written on file and length of the file is: "+f.length());
 	written=true;
 	 
@@ -54,7 +59,7 @@ public class FileServices {
 			reader=new BufferedReader(new FileReader(file));
 			 String line=null;
 			 
-			 while(file.length()==0) {
+			 if(!file.exists()) {
 				 
 				 wait();
 				 
